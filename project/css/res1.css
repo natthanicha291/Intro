@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 50px;
+}
+.flex-item-left {
+    background-color: rgb(59, 153, 184);
+    padding: 10px;
+    flex: 50%;
+}
+.flex-item-right {
+    background-color: rgb(78, 112, 78);
+    margin: 10px;
+    flex: 50%;
+}
+@media (max-width: 500px)  {
+    .flex-container {
+        flex-direction: column;
+    }
+}
