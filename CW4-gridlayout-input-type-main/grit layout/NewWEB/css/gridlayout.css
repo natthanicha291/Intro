@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    grid-area: header; background-color: #f1f1f1; padding: 30px; text-align: center;
+    font-size: 35px;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'left left middle middle right right'
+        'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+}
+.left,
+.middle,
+.right {
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+.left {
+    grid-area: left; background-color: rgb(240, 166, 166); padding: 10px; text-align: left;    
+}
+.middle {
+    grid-area: middle; background-color: #e4a6a6; padding: 10px; text-align: center;
+}
+.right {
+    grid-area: right; background-color: #e4a6a6; padding: 10px; text-align: right;
+}
+.footer {
+    grid-area: footer; background-color: #dac0c0; padding: 10px; text-align: center;
+}
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+        'header header header header header header'
+        'left left left left left left'
+        'middle middle middle middle middle middle'
+        'right right right right right right'
+        'footer footer footer footer footer footer';
+    }
+}
